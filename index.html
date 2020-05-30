@@ -1,0 +1,78 @@
+<!DOCTYPE html><!--웹페이지를 HTML로 작성하겠다는 선언, 첫 번쨰 줄에 작성-->
+<html lang="ko"><!--HTML설정 전체를 마크업 한다 루트 요소라고 부르며 lang속성으로 페이지의 콘텐츠가 어떤언어로 작성돠었는지를 명시한다 한국어로 작성할 것이니 ko사용-->
+    <head><!-- 브라우저 화면에 출력되지 않는 설정을 작성 하는 것-->
+        <meta charset="UTF-8"><!--HTML 파일의 인코딩 종류가 "UTF-8"이라는 것을 명시-->
+        <title>금요미식회</title><!--페이지의 타이틀을 설정-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--스마트폰, 테블릿 같은 모바일 장치 전용설정, 모바일 장치 화면 크기에 따라 페이지를 출력하려면 반드시 사용-->
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"><!--웹폰트 설정은 css파일로 제공되므로 link로 읽어들입니다 link rel을 통하여 가장 마지막에 읽어 들이게 구성하여 필요에 따라 웹폰트 설정을 덮어 씌울 수 있도록 합시다.-->
+        <link rel="stylesheet"  href="style.css"><!--외부css파일을 읽어들이는 설정 style.css를 불러온다-->
+
+        <script src="https://kit.fontawesome.com/fb1ddc7078.js" crossorigin="anonymous"></script>
+     </head>
+     <body><!--브라우저 화면에 출력할 내용을 작성하는 칸-->
+        <section class="conA"><!--컨텐츠A 하로인이미지를 담을 구역을 나눈 것-->
+            <div class="container"><!--컨테이너 박스는 시각적인 디자인 조정을 목적으로 한다 따라서 section처럼 콘텐츠 내용을 명시하는 태그가 아닌 의미없이 범용으로 사용하는 div사용-->
+                <img src="img/chopstick.svg" alt="">
+                <h1>Hole in the wall</h1><!--큰 제목을 설정할 때 사용 24px-->
+                <p>맛있고 즐거운 먹방 라이프</p><!--캐치프레이즈 16px로 출력-->
+                <a href="#">이번주 메뉴</a> <!--링크 거는 법 링크 기본 사이즈는 16px-->
+            </div>
+            </section>
+
+            <section class="conB">
+                <div class="container">
+                    <div class="text">
+                        <i class="fas fa-hamburger icon"></i><!--여러개 클래스 이름을 지정할 시 띄어쓰기로 구분-->
+                <h2>금요미식회란?</h2>
+                <p>과중 백수들이 그나마 쓸모있게 살기 위해 금요일마다 맛집을 가는 컨텐츠</p>
+                <a href="#">MORE</a>
+                <span class="fa fa-chevron-right"></span>
+                </div>
+
+                <div class="text">
+                    <span class="fa fa-gears icon"></span>
+                    <h2>스마트폰이 있다면</h2>
+                    <p>스마트폰이 있다면 언제라도 라이프로그를 시작할 수 있습니다.</p>
+                    <a href="#">More..
+                    <span class="fa fa-chevron-right"></span>
+                    </a>
+                </div>
+
+                <div class="text">
+                    <span class="fa fa-rocket icon"></span>
+                    <h2>SNS와 연동</h2>
+                    <p>Twitter와 Facebook 등의 SNS와 연동해서 로그를 간단하게 공유할 수 있습니다.</p>
+                    <a href="#">MORE..
+                        <span class="fa fa-chevron-right"></span>
+                    </a>
+                </div>
+            </div>  
+            </section>
+
+            <section class="conC">
+                <div class="container">
+                    <div class="photo"></div>
+                 <div class="text">
+                     <h2>귀찮은 설정과 데이터 관리를 하지 않아도 됩니다.</h2>
+                     <p>라이프로그에서는 귀찮은 설정과 데이터 관리를 따로 하지 않아도 됩니다. 다른 애플리케이션과의 연동도 버튼 하나만 누르면 됩니다.</p>
+                     <a href="#">Detail
+                     <span class="fa fa-chevron-right"></span>
+                    </a>
+                 </div>
+                </div>
+            </section>
+
+            <section class="conD">
+                <div class="container">
+                    <div class="photo"></div>
+                    <div class="text">
+                        <h2>라이프로그와 함께하는 재미있는 일상 생활</h2>
+                        <p>그때그때 일상을 기록하는 라이프로그, 나중에 과거의 일상을 보면 그떄는 알지 못햇던 다양한 즐거움이 보일 것 입니다.</p>
+                        <a href="#">라이프로그 살펴보기...
+                        <span class="fa fa-chevron-right"></span>
+                    </a>
+                    </div>
+                </div>
+            </section>
+     </body>
+</html>
