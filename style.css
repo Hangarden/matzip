@@ -8,10 +8,32 @@
   --text-bright-color: #fff;
   --icon-color: #fff;
   --icon-bk-color: #ddd;
-  --large-width: 1000px;
   --ConC-Bcolor:#F48056;
   --ConC-Button-color:#00A685;
   --ConD-Bcolor:#A7D6A5;
+  --gray-color: #ddd;
+  --large-width: 1000px;
+  --middle-width:800px;
+}
+
+/* 기본설정 : 폰트 크기 */
+@media (max-width: 599px) {
+    :root {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 799px) {
+    :root {
+        font-size: 16px;
+    }
+
+@media (min-width: 800px){
+    :root{
+        font-size: 18px;
+    }
+}
+body {font-size: 16pxx;}
 }
 
 /* 기본설정 : 페이지 전체 */
@@ -224,7 +246,7 @@ body {
 
     /* 콘텐츠D: 개요(이미지+글자)*/
     .conD .container {
-        padding-top: : 2px;;
+        padding-top:2px;;
     }
 .conD {
     background-image: url(img/ice-cream-2588541_1920.jpg);
@@ -443,9 +465,16 @@ body {
         background-color: rgba(255,255,255,0.9); /*반투명한 흰색*/
     }
 
+    .nohero header{
+        position: static; /*nohero포지션에서는 absolute가 static으로 대체*/
+        border-bottom: solid 1px #ddd;
+        border-bottom: solid 1px var(--gray-color);
+    }
+
     /* 헤더A: 사이트 이름 */
     .headA {
         display: inline-block; /*높이 지정을 페이지에 출력하도록 inline-block사용*/
+        line-height: 45px;
         padding-left: 20px;
         padding-right: 20px;
         background-color: #5D9AB2;
@@ -492,9 +521,64 @@ body {
 }
 
 /* 헤더C: 토글 버튼 */
+@media (max-width: 767px) {
+    /* 작은화면 전용설정 */
+    header .container-small {
+        display: flex; /*부모요소의 dispaly를 flex로 지정 이렇게 하면 사이트 이름과 네비게이션 모두 너비를 지정하지 않아 내부 내용에 맞게 크기를 가짐*/
+        align-items: center;  /*세로의 방향으로 중간 에 정렬 되도록 지정*/
+        justify-content: space-between; /*세로의 방향으로 중간에 정렬 되도록 지정*/
+    }
+
+    .headC {
+        margin-right: 10px;
+        padding: 0;
+        border: none;
+        outline: none;
+        background: none;
+        font-size: 28px;
+        opacity: 0.5;
+        cursor: pointer;
+    }
+
+    .headC:hover {
+        opacity: 0.3;
+    }
+
+    .headB {
+        display: none;
+    }
+}
+
 @media (min-width:768px) {
     /*큰 화면 전용 설정*/
     .headC {
         display: none;
     }
+
+    .headB {
+        display: block !important;
+    }
+}
+
+/* 콘텐츠 페이지 : 기사 */
+.post .container{
+    max-width: 800px;
+    max-width: var(--middle-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px 10px;
+}
+
+.post h1{
+    padding-left: 0.5rem;
+    border-left: solid 0.75rem #BF6A7A;
+    border-left: solid 0.75rem var(--accent-color);
+    font-size: 2rem;
+}
+.post p{
+    font-size: 1rem;
+    line-height: 2;
+}
+.post img {
+    max-width: 100%;
 }
